@@ -1,0 +1,512 @@
+*{
+    font-family: "Nunito";
+    box-sizing: border-box;
+}
+
+html{
+     scroll-behavior: smooth;
+     font-size: 1rem;
+     /* smooth scrollings */
+}
+
+:root{
+    --main_color: #2578f6;
+    --background: #ebf1fd;
+}
+
+
+header{
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: .8rem 10%; /*novieto pareizi pa vidu headeru*/
+    border-bottom: 0.1rem solid #ddd;
+
+    box-sizing: border-box;
+  
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo i{
+    color: var(--main_color);
+}
+
+header a{
+    text-decoration: none;
+    /* nonem nost pasvitrosanu PROGRAMM IT tekstam */
+}
+ul{ /*pirmstam - nav ul*/
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li{
+    margin-left: 2.5rem;
+    /* izveido atstarpes starp nav sadalaam */
+}
+
+nav ul li a{
+    text-decoration: none;
+    /* Noņem underline nav linkiem */
+    color: black;
+}
+
+nav ul li a:hover{
+    color: blue;
+    padding: 1rem 0;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+/* NAV BEIGAS */
+/* NEXT SECTION */
+#sakums{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 10%;
+    background: #f5f7fb;
+}
+
+#sakums .parMumsTeksts{
+    box-sizing: border-box;
+    align-items: start;
+    margin-right: 2rem;
+    flex: 1;
+}
+
+#sakums h3{
+    border: .1rem blue solid;
+    border-radius: 1rem;
+    margin: .2rem;
+    padding: .4rem;
+    max-width: 17rem;
+    background-color: rgba(40, 40, 210, 0.048);
+    color: var(--main_color);
+    /* japielabo krasas, bet to majas izdaris */
+}
+
+#sakums h2{
+    font-size: 3rem;
+}
+
+#sakums .parMumsTeksts p{
+    font-size: 1.4rem;
+}
+
+#sakums ul{
+    flex-direction: column;
+    align-items: normal;
+    padding: 0;
+}
+
+#sakums ul li p i{
+    color: var(--main_color);
+    margin-right: .5rem;
+}
+
+a, button {
+    transition: color .3s, background-color .3s, transform .2s;
+}
+
+#sakums button{
+    background-color: var(--main_color);
+    color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 0;
+    width: 13rem;
+    height: auto;
+    font-size: 1.2rem;
+    z-index: 1;
+}
+
+#sakums button:hover{
+    transform: scale(115%);
+    background-color: rgba(0, 255, 132, 0.466);
+    /* kad hovero pogu */
+}
+
+#sakums #imgBox{
+    position: relative;
+    flex: 1;
+}
+
+/* Image buttons */
+#sakums #imgBox button{
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+#buttonNext {
+    right: -2rem;
+}
+
+#buttonPrevious {
+    left: -2rem;
+}
+
+/* Image buttons end */
+
+#sakums #imgBox img{
+    border-radius: .5rem;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    box-shadow: 0 .5rem #eee;
+}
+/* SAKUMA SEKCIJAS BEIGAS */
+
+/* NEXT SECTION - Par Mums */
+
+#par-uznemumu{
+    padding: 4rem 15%;
+    text-align: center;;
+}
+
+#par-uznemumu h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#par-uznemumu h1::after{
+    content: '';
+    display: block;
+    width: 4rem;
+    height: .2rem;
+    background: var(--main_color);
+    margin: 1rem auto 0;
+}
+
+#par-uznemumu-teksts{
+    max-width: 44rem;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.kartinas {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+
+.kartina {
+    flex: 1 1 15rem;
+
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kartina:hover{
+    size: 105%;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,0.5);
+}
+
+.kartinas-ikonas-background {
+    width: 3rem;
+    height: 3rem;
+
+    min-width: 3rem;
+    min-height: 3rem;
+
+    border-radius: 50%;
+    background-color: var(--background);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+.kartinas i {
+    color: var(--main_color);
+}
+
+
+
+.kartina h3{
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+}
+
+.card{
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ===== MŪSU PIEREDZE ===== */
+
+#musupieredze {
+    padding: 4rem 10%;
+    background: #f5f7fb;
+  }
+  
+  /* 50/50 layout */
+  #musupieredze .mp-wrap {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  #musupieredze .mp-teksts {
+    width: 50%;
+    max-width: 34rem;
+  }
+  
+  #musupieredze .mp-teksts h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #musupieredze .mp-teksts h1::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    background: var(--main_color);
+    margin-top: 1rem;
+  }
+  
+  #musupieredze .mp-teksts p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* right side takes half */
+  #musupieredze .mp-kartinas {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* 2x2 cards, same size, flatter */
+  #musupieredze .mp-kartina {
+    width: 48%;
+    height: 6.8rem;
+  
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.08);
+    padding: 1.2rem 1.4rem;
+  
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* icon left, perfect circle */
+  #musupieredze .mp-ic {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--background);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    flex-shrink: 0;
+  }
+  
+  #musupieredze .mp-ic i {
+    color: var(--main_color);
+    font-size: 1.3rem;
+  }
+  
+  /* text right */
+  #musupieredze .mp-kartina-teksts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+  
+  #musupieredze .mp-kartina-teksts h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.05;
+    font-weight: 700;
+  }
+  
+  #musupieredze .mp-kartina-teksts h2 span {
+    color: var(--main_color);
+  }
+  
+  #musupieredze .mp-kartina-teksts p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  /* responsive */
+  @media (max-width: 64rem) {
+    #musupieredze .mp-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    #musupieredze .mp-text,
+    #musupieredze .mp-kartinas {
+      width: 100%;
+    }
+  
+    #musupieredze .mp-kartina {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+
+.ziliePlusini{
+    font-size: 3rem;
+    color: var(--main_color);
+    margin: 0;
+}
+
+/* <!-- ======= Saakaaas PAKALPOJUMI SECTION ====== --> */
+
+#pakalpojumi{
+    padding: 4rem 10%;
+}
+
+#pakalpojumi h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#pakalpojumi h1::after{
+    content: '';
+    display: block;
+    width: 4rem;
+    height: .2rem;
+    background: var(--main_color);
+    margin: 1rem auto 0;
+}
+
+#pakalpojumi p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+#pakalpojumi #pakalpojumi-saturs{
+    display: flex;
+}
+
+#pakalpojumi-teksts{
+    width: 40%;
+    /* border: #000 .5rem solid; 
+    SITO BORDERU VEELAAK IZDZEEST, JO PAGAIDAM TA IR KA vadlinija */
+}
+
+#pakalpojumi-teksts img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#pakalpojumi-teksts h1{
+    text-align: left;
+}
+#pakalpojumi-teksts p{
+    text-align: left;
+}
+
+/* PAKALPOJUMI KARTINAAAS(KOPEJAIS KARTINU DIVS */
+#pakalpojumi-kartinas{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.pakalpojumi-kartina{
+    background-color: var(--background);
+    border-radius: .5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: .5rem;
+    text-align: left;
+
+    width: 48%;
+    min-height: 20rem;
+    align-items: stretch;
+
+    text-align: center;
+}
+
+.pakalpojumi-kartina h2{
+    text-wrap: nowrap;
+}
+
+.pakalpojumi-kartina-ikona{
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.pakalpojumi-kartina-poga{
+    color: white;
+    background-color: var(--main_color);
+    border-radius: .5rem;
+    padding: .5rem .1rem;
+
+    margin-top: auto;    /* pushes button to the bottom */
+    align-self: center;
+    padding: 0.8rem 1.5rem;
+
+    border: 0;
+    font-weight: bold;
+}
+
+
+@media (max-width: 64rem){
+    #pakalpojumi-kartinas{
+        width: 100%;
+        flex-direction: column;
+    }
+    .pakalpojumi-kartina{
+        width: 100%;
+    }
+}
+
+
