@@ -287,7 +287,8 @@ a, button {
     font-size: 2.5rem;
     margin-bottom: 1rem;
   }
-  
+
+  /* PASVIITROJUMSS */
   #musupieredze .mp-teksts h1::after {
     content: "";
     display: block;
@@ -303,7 +304,7 @@ a, button {
     line-height: 1.5;
   }
   
-  /* right side takes half */
+  
   #musupieredze .mp-kartinas {
     width: 50%;
     display: flex;
@@ -311,7 +312,7 @@ a, button {
     gap: 1rem;
   }
   
-  /* 2x2 cards, same size, flatter */
+ 
   #musupieredze .mp-kartina {
     width: 48%;
     height: 6.8rem;
@@ -326,11 +327,12 @@ a, button {
     gap: 1rem;
   }
   
-  /* icon left, perfect circle */
+  
   #musupieredze .mp-ic {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    /* augsejie 3 veido apli */
     background: var(--background);
   
     display: flex;
@@ -338,6 +340,7 @@ a, button {
     justify-content: center;
   
     flex-shrink: 0;
+    /* NELAUJ SHRINKOTIES */
   }
   
   #musupieredze .mp-ic i {
@@ -377,7 +380,7 @@ a, button {
       align-items: flex-start;
     }
   
-    #musupieredze .mp-text,
+    #musupieredze .mp-teksts,
     #musupieredze .mp-kartinas {
       width: 100%;
     }
@@ -388,7 +391,7 @@ a, button {
     }
   }
   
-
+/* KLASE KAS IEKRASO PLUSINUS KARTINA */
 .ziliePlusini{
     font-size: 3rem;
     color: var(--main_color);
@@ -400,13 +403,13 @@ a, button {
 #pakalpojumi{
     padding: 4rem 10%;
 }
-
+/* PAKALPOJUMU VIRSRAKSTS */
 #pakalpojumi h1{
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 1rem;
 }
-
+/* VIRSRAKSTA PASVIITOROJUMS */
 #pakalpojumi h1::after{
     content: '';
     display: block;
@@ -422,23 +425,24 @@ a, button {
     color: #555;
     line-height: 1.5;
 }
-
+/* DIVS TAA LAI SATURETU VISU */
 #pakalpojumi #pakalpojumi-saturs{
     display: flex;
 }
-
+/* DIVS KREISAJAA PUSEE, KUR IR TEKSTS UN BILDE */
 #pakalpojumi-teksts{
     width: 40%;
     /* border: #000 .5rem solid; 
     SITO BORDERU VEELAAK IZDZEEST, JO PAGAIDAM TA IR KA vadlinija */
 }
-
+/* KREISAAS PUSES IMG */
 #pakalpojumi-teksts img{
     max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
 }
+/* KREISAAS PUSES TEKSTS */
 #pakalpojumi-teksts h1{
     text-align: left;
 }
@@ -446,7 +450,7 @@ a, button {
     text-align: left;
 }
 
-/* PAKALPOJUMI KARTINAAAS(KOPEJAIS KARTINU DIVS */
+/* PAKALPOJUMI KARTINAAAS(KOPEJAIS KARTINU DIVS) */
 #pakalpojumi-kartinas{
     width: 60%;
     display: flex;
@@ -454,7 +458,7 @@ a, button {
     gap: 1rem;
 }
 
-
+/* PASAS KARTINAS CSS */
 .pakalpojumi-kartina{
     background-color: var(--background);
     border-radius: .5rem;
@@ -472,25 +476,28 @@ a, button {
     text-align: center;
 }
 
+/* kartinas h2 */
 .pakalpojumi-kartina h2{
     text-wrap: nowrap;
 }
 
+/* kartinas augsaa ir ikonina */
 .pakalpojumi-kartina-ikona{
     display: flex;
     font-size: 2.5rem;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
 }
 
+/* uzzinat vairak poga */
 .pakalpojumi-kartina-poga{
     color: white;
     background-color: var(--main_color);
     border-radius: .5rem;
     padding: .5rem .1rem;
 
-    margin-top: auto;    /* pushes button to the bottom */
+    /* margin-top: auto;    pushes button to the bottom */
     align-self: center;
     padding: 0.8rem 1.5rem;
 
@@ -498,7 +505,7 @@ a, button {
     font-weight: bold;
 }
 
-
+/* prieks mazakam iericam */
 @media (max-width: 64rem){
     #pakalpojumi-kartinas{
         width: 100%;
@@ -509,4 +516,5 @@ a, button {
     }
 }
 
+/* ========= SADARBIBAS PARTNERI ============ */
 
