@@ -824,7 +824,7 @@ button {
 /* =========== MUUUUSU KOMANDAA SEKCIJAS SAAKUMSS ======= */
 #komanda {
     padding: 4rem 10%;
-    background: #f5f7fb;
+    background: #fff;
 }
 
 .komanda-virsraksts {
@@ -858,13 +858,15 @@ button {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    height: auto;
+    
 }
 
 .komanda-ievads {
     flex: 0 0 auto;
     max-width: 22rem;
     background: #ffffff;
-    
+    box-shadow: .5rem solid #555;
 }
 
 .komanda-ievads h2 {
@@ -883,7 +885,7 @@ button {
 }
 
 .komanda-ievads p {
-    font-size: 1.177rem;
+    font-size: .95rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -942,7 +944,6 @@ button {
 .komanda-kartina img {
     width: auto;
     height: 15rem;
-    border-radius: 1rem;
     object-fit: cover;
     box-shadow: 0 0.4rem 1rem rgba(15, 30, 80, 0.12);
     border-radius: .5rem .5rem 0 0;
@@ -950,10 +951,6 @@ button {
     margin: 0;
     text-align: center;
 }
-
-/* .komanda-informacija {
-    text-align: left;
-} */
 
 .komanda-informacija h3 {
     font-size: 1.2rem;
@@ -987,6 +984,8 @@ button {
     box-shadow: 0 0.3rem 0.8rem rgba(15, 30, 80, 0.08);
     text-decoration: none;
     transition: transform 0.3s, background 0.3s, color 0.3s;
+    margin-right: 1rem;
+    /* nomainiiit kraaasuuu!!!! */
 }
 
 .komanda-sociala-ikona:hover {
