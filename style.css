@@ -570,15 +570,25 @@ button {
     box-shadow: .2rem solid #555;
 }
 
+#sadarbibasPartneri marquee:hover {
+    animation-play-state: paused;
+}
+
 /* ========= Biežāk uzdotie jautājumi BUJ ============ */
-#BUJ{
+#BUJ {
     background-color: #ffffff;
-    padding: 4rem 20%;
-    height: auto
+    padding: 4rem 20% 5rem;
+}
+
+.buj-virsraksts {
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 #BUJ h1 {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 #BUJ h1::after {
@@ -595,53 +605,406 @@ button {
     font-size: 1.2rem;
     color: #555;
     line-height: 1.5;
+    max-width: 48rem;
+    margin: 0 auto;
 }
 
-/* IZVEEEELNEE (Sadarbiba, Pakalojumi un risinājumi, Rezultāti un izaugsme */
-
-/* Tipa wrapper DIV */
-#izvelne{
+.buj-izvelne {
     display: flex;
-    text-wrap: nowrap;
-    border-radius: 2rem;
-    width: 44rem;
-    height: 2rem;
-    background-color: gray;
-    gap: 2rem;
-    padding: 2rem 0rem;
-    align-items: center;
-}
-
-/* klase kura atrodas ieksa #izvelne, tatad siis ir izveles opcijas */
-.izvelnesOpcija{
-    background-color: var(--main_color);
-    border-radius: 2rem;
-    margin: .5rem;
-    padding: .5rem .2rem;
-}
-
-#izvelne p{
-display: inline;
-}
-
-#jautajumi {
-    text-align: center;
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
+    justify-content: flex-start;
     gap: 1rem;
-    flex-direction: row;
+    background: #f5f7fb;
+    padding: 0.5rem;
+    border-radius: 999px;
+    margin: 0 0 2rem;
+    width: fit-content;
 }
 
-.jautajumi-nummurejums{
-    width: 2rem;
-    height: 2rem;
+.buj-izvele {
+    background: transparent;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.buj-izvele i {
+    color: var(--main_color);
+}
+
+.buj-izvele.ir-aktivs {
+    background: var(--main_color);
+    color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(37, 120, 246, 0.25);
+}
+
+.buj-izvele.ir-aktivs i {
+    color: #fff;
+}
+
+.buj-saraksts {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.buj-ieraksts {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 0.9rem 1.1rem;
+    box-shadow: 0 0.4rem 1rem rgba(15, 30, 80, 0.08);
+    width: 100%;
+}
+
+.buj-jautajums {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    min-height: 3.4rem;
+}
+
+.buj-teksts {
+    flex: 1;
+}
+
+.buj-numurs {
+    width: 1.9rem;
+    height: 1.9rem;
     border-radius: 50%;
     background-color: var(--main_color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.buj-plus {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a8a8a;
+    flex-shrink: 0;
+}
+
+.buj-aicinajums {
+    margin: 2rem 0 0;
+    background: #f5f7fb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.buj-aicinajums p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+.buj-aicinajums button {
+    background: var(--main_color);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.7rem 1.6rem;
+    font-weight: 700;
+}
+
+@media (max-width: 64rem) {
+    #BUJ {
+        padding: 4rem 6%;
+    }
+
+    .buj-izvelne {
+        flex-direction: column;
+        border-radius: 1.5rem;
+        max-width: 100%;
+    }
+
+    .buj-izvele {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 40rem) {
+    .buj-jautajums {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 30rem) {
+    .buj-izvele {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========= BLOGS SEKCIJAS SAAAKUMSSSS ========= */
+#blogs {
+    padding: 3rem 15%;
+    background: #f5f7fb;
+}
+
+#bloga-konteineris {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: .5rem solid #444;
+}
+
+.bloga-teksts {
+    flex: 1;
+    max-width: 34rem;
+    padding: 3rem 2rem;
+}
+
+#bloga-konteineris h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+   
 }
 
 
 
-.jautajums .plusini {
-    padding: 0 90% 10%;
+.bloga-teksts p {
+    font-size: .9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.bloga-teksts button {
+    margin-top: 2rem;
+    background-color: #fff;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: .2rem solid black;
+    font-size: 1.2rem;
+}
+
+.bloga-attels {
+    flex: 1;
+}
+
+.bloga-attels img {
+    max-width: 80%;
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 64rem) {
+    #bloga-konteineris {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* =========== MUUUUSU KOMANDAA SEKCIJAS SAAKUMSS ======= */
+#komanda {
+    padding: 4rem 10%;
+    background: #f5f7fb;
+}
+
+.komanda-virsraksts {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.komanda-virsraksts h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.komanda-virsraksts h1::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background: var(--main_color);
+    margin: 1rem auto 0;
+}
+
+.komanda-virsraksts p {
+    font-size: .9rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+.komanda-saturs {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.komanda-ievads {
+    flex: 0 0 auto;
+    max-width: 22rem;
+    background: #ffffff;
+    
+}
+
+.komanda-ievads h2 {
+    padding: 5rem 0 0 0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.komanda-ievads h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.2rem;
+    background: var(--main_color);
+    margin-top: 0.8rem;
+}
+
+.komanda-ievads p {
+    font-size: 1.177rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.komanda-navigacija {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.komanda-nav-poga {
+    background: transparent;
+    color: var(--main_color);
+    border: 0.2rem solid var(--main_color);
+    border-radius: 50%;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.komanda-nav-poga:hover {
+    background: var(--main_color);
+    color: #ffffff;
+    transform: translateY(-0.15rem);
+}
+
+.komanda-kartinas {
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.komanda-kartina {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 1.2rem;
+    box-shadow: 0 0.6rem 1.5rem rgba(15, 30, 80, 0.08);
+    padding: 0 0 1.4rem 0;
+    display: flex;
+    gap: 1rem;
+    align-items: left;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.komanda-kartina:hover {
+    size: 105%;
+    box-shadow: 0 0.8rem 1.8rem rgba(15, 30, 80, 0.12);
+}
+
+.komanda-kartina img {
+    width: auto;
+    height: 15rem;
+    border-radius: 1rem;
+    object-fit: cover;
+    box-shadow: 0 0.4rem 1rem rgba(15, 30, 80, 0.12);
+    border-radius: .5rem .5rem 0 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* .komanda-informacija {
+    text-align: left;
+} */
+
+.komanda-informacija h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.3rem;
+    padding: .5rem 0 0 2rem;
+}
+
+.komanda-informacija p {
+    margin: 0;
+    color: var(--main_color);
+    font-size: 0.95rem;
+    padding: 0rem 2rem;
+}
+
+.komanda-socialie {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    padding: 0rem 2rem 1rem 2rem;
+}
+
+.komanda-sociala-ikona {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: #f5f7fb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main_color);
+    box-shadow: 0 0.3rem 0.8rem rgba(15, 30, 80, 0.08);
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.komanda-sociala-ikona:hover {
+    background: var(--main_color);
+    color: #ffffff;
+    transform: translateY(-0.1rem);
+}
+
+@media (max-width: 64rem) {
+    .komanda-saturs {
+        flex-direction: column;
+    }
+
+    .komanda-ievads {
+        max-width: 100%;
+    }
+
+    .komanda-kartinas {
+        flex-direction: column;
+    }
 }

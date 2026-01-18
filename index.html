@@ -251,7 +251,7 @@
         <h1>Sadarbības partneri</h1>
         <p>Mēs sadarbojamies ar uzticamiem, un profesionāliem partneriem, lai nodrošinātu augstāko kvalitāti, plašākas
             iespējas, un efektīvākus risinājumus mūsu klientiem.</p>
-        <marquee width="100%" direction="left" height="150px">
+        <marquee width="100%" direction="left" height="150px" onmouseover="this.stop()" onmouseout="this.start()">
             <img src="Nepieciešamie ATTĒLI (2)/p1.png" alt="">
             <img src="Nepieciešamie ATTĒLI (2)/p2.png" alt="">
             <img src="Nepieciešamie ATTĒLI (2)/p3.png" alt="">
@@ -274,7 +274,7 @@
 
     <!-- =============== BIEŽĀK UZDOTIE JAUTAJUMI BUJ ==========  -->
 
-    <section id="BUJ">
+    <!-- <section id="BUJ">
         <h1>Biežāk uzdotie jautājumi (BUJ)</h1>
         <p>šeit atradīsi atbildes uz biežāk uzdotajiem jautājumiem par mūsu pieeju, pakalpojumiem un procesu.</p>
 
@@ -298,13 +298,148 @@
                 <div class="jautajums"><span class="jautajumi-nummurejums">1</span>Vai iespējams strādāt pie jau esoša projekta?</div>
                 <div class="jautajums"><span class="jautajumi-nummurejums">1</span>Cik ilgs ir vidējais projekta izstrādes laiks</div>
         </div>
-            <!-- <div class="jautajums">
+            <div class="jautajums">
             <div class="kartinas-ikonas-background">1</div>
             <h1>Kā notiek sadarbības uzsākšana?</h1>
-            <i class="fa-solid fa-plus"></i> -->
+            <i class="fa-solid fa-plus"></i>
         </div>
+        </div>
+    </section> -->
+
+    <section id="BUJ">
+        <div class="buj-virsraksts">
+            <h1>Biežāk uzdotie jautājumi (BUJ)</h1>
+            <p>Šeit atradīsi atbildes uz biežāk uzdotajiem jautājumiem par mūsu pieeju, pakalpojumiem un procesu.</p>
+        </div>
+
+        <div class="buj-izvelne">
+            <div class="buj-izvele ir-aktivs">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Sadarbība</span>
+            </div>
+            <div class="buj-izvele">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Pakalpojumi un risinājumi</span>
+            </div>
+            <div class="buj-izvele">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Rezultāti un izaugsme</span>
+            </div>
+        </div>
+
+        <ul class="buj-saraksts">
+            <li class="buj-ieraksts">
+                <div class="buj-jautajums">
+                    <span class="buj-numurs">1</span>
+                    <span class="buj-teksts">Kā notiek sadarbības uzsākšana?</span>
+                    <span class="buj-plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                </div>
+            </li>
+            <li class="buj-ieraksts">
+                <div class="buj-jautajums">
+                    <span class="buj-numurs">2</span>
+                    <span class="buj-teksts">Vai iespējams strādāt pie jau esoša projekta?</span>
+                    <span class="buj-plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                </div>
+            </li>
+            <li class="buj-ieraksts">
+                <div class="buj-jautajums">
+                    <span class="buj-numurs">3</span>
+                    <span class="buj-teksts">Cik ilgs ir vidējais projekta izstrādes laiks?</span>
+                    <span class="buj-plus">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="buj-aicinajums">
+            <p>Ja Tev ir jautājumi, droši raksti mums!</p>
+            <button type="button">Sazinies ar mums</button>
         </div>
     </section>
+
+    <section id="blogs">
+        <div id="bloga-konteineris">
+            <div class="bloga-teksts">
+                <h1>Uzzināt vairāk par IT un mārktetingu</h1>
+                <p>Mūsu blogā dalāmies ar jaunākajām IT, digitālā mārktetinga un biznesa attīstības aktualitātēm, praktiskiem padomiem un ieskatiem, kas palīdz pieņemt gudrākus lēmumu sekot līdzi nozares
+                    tendencēm.</p>
+                <button>Apskatīt mūsu blogu</button>
+            </div>
+            <div class="bloga-attels">
+                <img src="Nepieciešamie ATTĒLI (2)/blog.png" alt="Bloga bilde">
+            </div>
+        </div>
+    </section>
+
+    <section id="komanda">
+        <div class="komanda-virsraksts">
+            <h1>Mūsu komanda</h1>
+            <p>Mūsu komandā apvienojas radoši, tehniski un stratēģiski prāti, kas strādā kopā, lai idejas pārvērstu prakstiskos un efektīvos risinājumos.</p>
+        </div>
+
+        <div class="komanda-saturs">
+            <div class="komanda-ievads">
+                <h2>Galvenie eksperti</h2>
+                <p>Iepazīsties ar mūsu galvenajiem nodaļu vadītājiem - profesionāļiem ar pieredzi stratēģijā, dizainā, izstrādē un mārketingā, kuri katrs iegulda savu ekspertīzi, lai Tava ideja kļūtu par veiksmīgu un ilgtspējīgu risinājumu.</p>
+                <div class="komanda-navigacija">
+                    <button class="komanda-nav-poga" type="button" aria-label="Iepriekšējais">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="komanda-nav-poga" type="button" aria-label="Nākamais">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="komanda-kartinas">
+                <article class="komanda-kartina">
+                    <img src="Nepieciešamie ATTĒLI (2)/a1.png" alt="Jānis Bērziņš">
+                    <div class="komanda-informacija">
+                        <h3>Jānis Bērziņš</h3>
+                        <p>Valdes loceklis</p>
+                        <div class="komanda-socialie">
+                            <a class="komanda-sociala-ikona" href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a class="komanda-sociala-ikona" href="#" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="komanda-kartina">
+                    <img src="Nepieciešamie ATTĒLI (2)/a2.png" alt="Ieva Lapiņa">
+                    <div class="komanda-informacija">
+                        <h3>Ieva Lapiņa</h3>
+                        <p>Mārketinga vadītāja</p>
+                        <div class="komanda-socialie">
+                            <a class="komanda-sociala-ikona" href="#" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a class="komanda-sociala-ikona" href="#" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a class="komanda-sociala-ikona" href="#" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
 </body>
 
 </html>
