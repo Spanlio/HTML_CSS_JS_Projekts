@@ -1007,3 +1007,189 @@ button {
         flex-direction: column;
     }
 }
+
+/* ====== sekcijas kontakti saakumss ======== */
+
+#kontakti {
+    padding: 4rem 10% 5rem;
+    background: #f5f7fb;
+}
+
+.kontakti-virsraksts {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.kontakti-virsraksts h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.kontakti-virsraksts h1::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 0.2rem;
+    background: var(--main_color);
+    margin: 1rem auto 0;
+}
+
+.kontakti-virsraksts p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.kontakti-saturs {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.kontakti-kolonna {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.kontakti-kartinas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.kontakti-kartina {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 0.5rem 1.4rem rgba(15, 30, 80, 0.08);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.kontakti-kartina h3 {
+    margin: 0 0 0.25rem;
+    font-size: 1rem;
+}
+
+.kontakti-kartina p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.kontakti-ikona {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.75rem;
+    background: var(--background);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main_color);
+    flex-shrink: 0;
+}
+
+.kontakti-forma {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1.4rem rgba(15, 30, 80, 0.08);
+}
+
+.kontakti-forma h2 {
+    margin: 0 0 0.8rem;
+    font-size: 1.5rem;
+}
+
+.kontakti-forma p {
+    margin: 0 0 1.5rem;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.kontakti-lauki {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.kontakti-forma input,
+.kontakti-forma textarea {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 0.1rem solid #dbe3f5;
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.kontakti-forma button {
+    margin-top: 1rem;
+    background: var(--main_color);
+    color: #fff;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 1.8rem;
+    font-weight: 700;
+}
+
+.kontakti-karte {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0.5rem 1.4rem rgba(15, 30, 80, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kontakti-karte iframe {
+    border: 0;
+    width: 100%;
+    height: 22rem;
+    border-radius: 0.75rem;
+}
+
+.kontakti-socialie {
+    display: flex;
+    gap: 0.7rem;
+    justify-content: flex-end;
+}
+
+.kontakti-socialie a {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: var(--background);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main_color);
+    text-decoration: none;
+}
+
+@media (max-width: 64rem) {
+    .kontakti-saturs {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakti-kartinas {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakti-lauki {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakti-socialie {
+        justify-content: flex-start;
+    }
+}
