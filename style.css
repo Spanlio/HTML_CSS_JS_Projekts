@@ -1043,8 +1043,7 @@ button {
 }
 
 .kontakti-saturs {
-    display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    display: flex;
     gap: 2rem;
     align-items: start;
 }
@@ -1056,8 +1055,7 @@ button {
 }
 
 .kontakti-kartinas {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
     gap: 1rem;
 }
 
@@ -1114,10 +1112,18 @@ button {
 }
 
 .kontakti-lauki {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 1rem;
+}
+
+.kontakti-lauki input {
+    flex: 1 1 calc(50% - 0.5rem);
+}
+
+.kontakti-lauki .kontakti-temats {
+    flex: 1 1 100%;
 }
 
 .kontakti-forma input,
@@ -1178,15 +1184,15 @@ button {
 
 @media (max-width: 64rem) {
     .kontakti-saturs {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .kontakti-kartinas {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .kontakti-lauki {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .kontakti-socialie {
