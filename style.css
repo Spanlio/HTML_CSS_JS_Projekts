@@ -29,6 +29,7 @@ header {
     border-bottom: 0.1rem solid #ddd;
 
     box-sizing: border-box;
+    z-index: 1000;
 
 }
 
@@ -51,7 +52,6 @@ header a {
 }
 
 ul {
-    /*pirmstam - nav ul*/
     display: flex;
     align-items: center;
     list-style: none;
@@ -73,6 +73,24 @@ nav ul li a:hover {
     padding: 1rem 0;
     text-decoration: underline;
     text-underline-offset: 1rem;
+}
+
+@media (max-width: 64rem) {
+    nav ul li{
+        margin-left: .5rem;
+    }
+}
+
+@media (max-width: 45rem) {
+    header{
+        flex-direction: column;
+    }
+    ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin-bottom: 1rem;
+    }
 }
 
 /* NAV BEIGAS */
@@ -97,9 +115,10 @@ nav ul li a:hover {
     border-radius: 1rem;
     margin: .2rem;
     padding: .4rem;
-    max-width: 17rem;
+    max-width: 18rem;
     background-color: rgba(40, 40, 210, 0.048);
     color: var(--main_color);
+    text-wrap: nowrap;
     /* japielabo krasas, bet to majas izdaris */
 }
 
@@ -148,7 +167,10 @@ button {
 #sakums #imgBox {
     position: relative;
     flex: 1;
+    padding: 0;
 }
+
+
 
 /* Image pogas */
 #sakums #imgBox button {
@@ -157,10 +179,13 @@ button {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    padding: 0;
+    margin: 0;
 }
 
 #buttonNext {
     right: -2rem;
+    padding: 0;
 }
 
 #buttonPrevious {
@@ -179,7 +204,7 @@ button {
 
 /* SAKUMA SEKCIJAS BEIGAS */
 
-/* NEXT SECTION - Par Mums */
+/* N================== NAAKAMAAS SEKCIJA PAR UZNEMUMU ======================*/
 
 #par-uznemumu {
     padding: 4rem 15%;
@@ -209,10 +234,18 @@ button {
     color: #555;
 }
 
-.kartinas {
+/* kartinu konteineris */
+#par-uznemumu .kartinas {
     display: flex;
     gap: 2rem;
     flex-wrap: nowrap;
+}
+
+/* mazakam iericem(aizmirsu terminu) */
+@media (max-width: 64rem) {
+    #par-uznemumu .kartinas{
+        flex-direction: column;
+    }
 }
 
 
@@ -268,11 +301,6 @@ button {
     font-size: 1.2rem;
 }
 
-.card {
-    font-size: 1rem;
-    color: #555;
-}
-
 /* ===== MŪSU PIEREDZE ===== */
 
 #musupieredze {
@@ -280,7 +308,6 @@ button {
     background: #f5f7fb;
 }
 
-/* 50/50 layout */
 #musupieredze .mp-wrap {
     display: flex;
     align-items: center;
@@ -337,7 +364,7 @@ button {
 }
 
 
-#musupieredze .mp-ic {
+#musupieredze .musu-pieredze-ikonas {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
@@ -352,7 +379,7 @@ button {
     /* NELAUJ SHRINKOTIES */
 }
 
-#musupieredze .mp-ic i {
+#musupieredze .musu-pieredze-ikonas i {
     color: var(--main_color);
     font-size: 1.3rem;
 }
@@ -382,7 +409,7 @@ button {
     color: #666;
 }
 
-/* responsive */
+/* responisivitatee */
 @media (max-width: 64rem) {
     #musupieredze .mp-wrap {
         flex-direction: column;
@@ -472,13 +499,20 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
+}
+
+@media (max-width: 64rem) {
+    .pakalpojumi-kartina{
+        flex-direction: column;
+    }
 }
 
 /* PASAS KARTINAS CSS */
 .pakalpojumi-kartina {
     background-color: var(--background);
-    border-radius: .5rem;
-
+    border-radius: 2rem;
+    border: .1rem solid lightgray;
     display: flex;
     flex-direction: column;
 
@@ -511,9 +545,8 @@ button {
     color: white;
     background-color: var(--main_color);
     border-radius: .5rem;
-    padding: .5rem .1rem;
+    margin: .5rem 0 2rem;
 
-    /* margin-top: auto;    pushes button to the bottom */
     align-self: center;
     padding: 0.8rem 1.5rem;
 
@@ -567,7 +600,11 @@ button {
 
 #sadarbibasPartneri img {
     filter: grayscale(100%);
-    box-shadow: .2rem solid #555;
+    box-shadow: .5rem solid #555;
+}
+
+#sadarbibasPartneri img:hover {
+    filter: grayscale(0%);
 }
 
 #sadarbibasPartneri marquee:hover {
@@ -591,6 +628,7 @@ button {
     margin-bottom: 1rem;
 }
 
+/* pasvtirojums */
 #BUJ h1::after {
     content: '';
     display: block;
@@ -609,6 +647,7 @@ button {
     margin: 0 auto;
 }
 
+/* divs skas satur taas 3 izveeles */
 .buj-izvelne {
     display: flex;
     justify-content: flex-start;
@@ -620,6 +659,7 @@ button {
     width: fit-content;
 }
 
+/* 3 izveelu klase */
 .buj-izvele {
     background: transparent;
     color: #444;
@@ -631,21 +671,22 @@ button {
     font-weight: 600;
     font-size: 0.95rem;
 }
-
+/* izveles ikonina */
 .buj-izvele i {
     color: var(--main_color);
 }
 
-.buj-izvele.ir-aktivs {
+.buj-izvele.zils {
     background: var(--main_color);
     color: #fff;
     box-shadow: 0 0.5rem 1rem rgba(37, 120, 246, 0.25);
 }
 
-.buj-izvele.ir-aktivs i {
+.buj-izvele.zils i {
     color: #fff;
 }
 
+/* klase kas satur kopaa jautajumus */
 .buj-saraksts {
     list-style: none;
     display: flex;
@@ -656,6 +697,7 @@ button {
     width: 100%;
 }
 
+/* jautajums */
 .buj-ieraksts {
     background: #ffffff;
     border-radius: 1rem;
@@ -693,6 +735,7 @@ button {
     flex-shrink: 0;
 }
 
+/* plusins jautajuma beigaas */
 .buj-plus {
     width: 1.9rem;
     height: 1.9rem;
@@ -704,7 +747,7 @@ button {
     color: #8a8a8a;
     flex-shrink: 0;
 }
-
+/* ja ir jautajumi divs */
 .buj-aicinajums {
     margin: 2rem 0 0;
     background: #f5f7fb;
@@ -714,11 +757,13 @@ button {
     width: 100%;
 }
 
+/* ja ir jautajumi teksts */
 .buj-aicinajums p {
     margin-bottom: 1rem;
     font-size: 1.05rem;
 }
 
+/* ja ir jautajumi poga */
 .buj-aicinajums button {
     background: var(--main_color);
     color: #fff;
@@ -726,6 +771,11 @@ button {
     border-radius: 999px;
     padding: 0.7rem 1.6rem;
     font-weight: 700;
+}
+
+.buj-aicinajums button:hover{
+    background-color: lightblue;
+
 }
 
 @media (max-width: 64rem) {
@@ -793,6 +843,7 @@ button {
     line-height: 1.6;
 }
 
+/* apskatit musu blogu poga */
 .bloga-teksts button {
     margin-top: 2rem;
     background-color: #fff;
@@ -803,6 +854,12 @@ button {
     font-size: 1.2rem;
 }
 
+.bloga-teksts button:hover{
+    color: #ddd;
+    background: #000;
+}
+
+/* attela divs */
 .bloga-attels {
     flex: 1;
 }
@@ -890,12 +947,13 @@ button {
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
-
+/* nav pogu konteineris */
 .komanda-navigacija {
     display: flex;
     gap: 0.6rem;
 }
 
+/* podzinasss */
 .komanda-nav-poga {
     background: transparent;
     color: var(--main_color);
@@ -915,6 +973,7 @@ button {
     transform: translateY(-0.15rem);
 }
 
+/* konteineris komandas dalibnieku kartinam */
 .komanda-kartinas {
     flex: 1;
     display: flex;
@@ -923,6 +982,7 @@ button {
     margin-top: 3rem;
 }
 
+/* komandas dalibnieks */
 .komanda-kartina {
     flex: 1;
     background: #ffffff;
@@ -1011,8 +1071,9 @@ button {
 /* ====== sekcijas kontakti saakumss ======== */
 
 #kontakti {
-    padding: 4rem 10% 5rem;
+    padding: 4rem 15% 5rem;
     background: #f5f7fb;
+    margin: auto;
 }
 
 .kontakti-virsraksts {
@@ -1040,6 +1101,13 @@ button {
     line-height: 1.6;
     max-width: 52rem;
     margin: 0 auto;
+    text-wrap: nowrap ;
+}
+
+@media (max-width: 64rem){
+    .kontakti-virsraksts p{
+        text-wrap: wrap;
+    }
 }
 
 .kontakti-saturs {
@@ -1067,6 +1135,7 @@ button {
     display: flex;
     gap: 1rem;
     align-items: center;
+    width: 25rem;
 }
 
 .kontakti-kartina h3 {
@@ -1147,10 +1216,15 @@ button {
     font-weight: 700;
 }
 
+#anketasPoga:hover{
+    color: var(--background);
+    background: var(--main_color);
+}
+
 .kontakti-karte {
     background: #fff;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0rem;
     box-shadow: 0 0.5rem 1.4rem rgba(15, 30, 80, 0.08);
     display: flex;
     flex-direction: column;
@@ -1159,8 +1233,8 @@ button {
 
 .kontakti-karte iframe {
     border: 0;
-    width: 100%;
-    height: 22rem;
+    width: 30rem;
+    height: 38rem;
     border-radius: 0.75rem;
 }
 
@@ -1174,12 +1248,17 @@ button {
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
-    background: var(--background);
+    background: var(--main_color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--main_color);
     text-decoration: none;
+    
+}
+
+.kontakti-socialie a i{
+    color: var(--background);
 }
 
 @media (max-width: 64rem) {
@@ -1198,4 +1277,34 @@ button {
     .kontakti-socialie {
         justify-content: flex-start;
     }
+}
+
+/* ============= footer sekcijas saaakums ============ */
+
+footer{
+    text-align: center;
+    color: #666;
+    background: var(--background);
+}
+
+/* ========================== POGA ============================= */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--main_color); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }

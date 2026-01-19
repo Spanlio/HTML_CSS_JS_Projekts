@@ -25,7 +25,7 @@
         <nav>
             <ul>
                 <li><a href="#sakums">Sākums</a></li>
-                <li><a href="#parmums">Par mums</a></li>
+                <li><a href="#par-uznemumu">Par mums</a></li>
                 <li><a href="#pakalpojumi">Pakalpojumi</a></li>
                 <li><a href="#BUJ">BUJ</a></li>
                 <li><a href="#blogs">Blogs</a></li>
@@ -34,6 +34,8 @@
             </ul>
         </nav>
     </header>
+
+    <button onclick="topFunction()" id="myBtn">Uz augšu</button>
     <section id="sakums">
         <div class="parMumsTeksts">
             <h3><i class="fa-regular fa-lightbulb"></i>Stratēģiski digitāli risinājumi</h3>
@@ -62,7 +64,32 @@
 
 
         <div id="imgBox">
-            <img src="Nepieciešamie ATTĒLI (2)/s1.png" alt="parMumsBilde">
+            <div class="slideshow-container">
+<!-- freestlye -->
+                        <div class="mySlides fade">
+                            <img src="Nepieciešamie ATTĒLI (2)/s1.png" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img src="Nepieciešamie ATTĒLI (2)/s2.png" style="width:100%">
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <img src="Nepieciešamie ATTĒLI (2)/s3.png" style="width:100%">
+                        </div>
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+
+
+
+
             <!-- pogas, lai parslegtu bildes -->
             <button id="buttonPrevious">
                 <i class="fa-solid fa-less-than"></i>
@@ -142,7 +169,7 @@
             <div class="mp-kartinas">
 
                 <div class="mp-kartina">
-                    <div class="mp-ic">
+                    <div class="musu-pieredze-ikonas">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
                     <div class="mp-kartina-teksts">
@@ -152,7 +179,7 @@
                 </div>
 
                 <div class="mp-kartina">
-                    <div class="mp-ic">
+                    <div class="musu-pieredze-ikonas">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <div class="mp-kartina-teksts">
@@ -162,7 +189,7 @@
                 </div>
 
                 <div class="mp-kartina">
-                    <div class="mp-ic">
+                    <div class="musu-pieredze-ikonas">
                         <i class="fa-solid fa-clock"></i>
                     </div>
                     <div class="mp-kartina-teksts">
@@ -172,7 +199,7 @@
                 </div>
 
                 <div class="mp-kartina">
-                    <div class="mp-ic">
+                    <div class="musu-pieredze-ikonas">
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
                     <div class="mp-kartina-teksts">
@@ -251,7 +278,17 @@
         <h1>Sadarbības partneri</h1>
         <p>Mēs sadarbojamies ar uzticamiem, un profesionāliem partneriem, lai nodrošinātu augstāko kvalitāti, plašākas
             iespējas, un efektīvākus risinājumus mūsu klientiem.</p>
-        <marquee width="100%" direction="left" height="150px" onmouseover="this.stop()" onmouseout="this.start()">
+        <marquee loop="-1" width="100%" direction="left" height="150px" onmouseover="this.stop()" onmouseout="this.start()">
+            <!-- stack overflow -->
+            <img src="Nepieciešamie ATTĒLI (2)/p1.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p2.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p3.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p4.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p5.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p6.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p7.png" alt="">
+            <img src="Nepieciešamie ATTĒLI (2)/p8.png" alt="">
+
             <img src="Nepieciešamie ATTĒLI (2)/p1.png" alt="">
             <img src="Nepieciešamie ATTĒLI (2)/p2.png" alt="">
             <img src="Nepieciešamie ATTĒLI (2)/p3.png" alt="">
@@ -274,38 +311,6 @@
 
     <!-- =============== BIEŽĀK UZDOTIE JAUTAJUMI BUJ ==========  -->
 
-    <!-- <section id="BUJ">
-        <h1>Biežāk uzdotie jautājumi (BUJ)</h1>
-        <p>šeit atradīsi atbildes uz biežāk uzdotajiem jautājumiem par mūsu pieeju, pakalpojumiem un procesu.</p>
-
-        <div id="izvelne">
-            <div class="izvelnesOpcija" id="sadarbiba">
-                    <i class="fa-solid fa-handshake"></i>
-                    <p>Sadarbība</p>
-                </div>
-
-                <div class="izvelnesOpcija" id="risinajumi">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <p>Pakalpojumi un risinājumi</p>
-                </div>
-
-                <div class="izvelnesOpcija" id="rezultati">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <p>Rezultāti un izaugsme</p>
-        </div>
-        <div id="jautajumi">
-                <div class="jautajums"><span class="jautajumi-nummurejums">1</span>Kā notiek darbīas uzsākšana?</div>
-                <div class="jautajums"><span class="jautajumi-nummurejums">1</span>Vai iespējams strādāt pie jau esoša projekta?</div>
-                <div class="jautajums"><span class="jautajumi-nummurejums">1</span>Cik ilgs ir vidējais projekta izstrādes laiks</div>
-        </div>
-            <div class="jautajums">
-            <div class="kartinas-ikonas-background">1</div>
-            <h1>Kā notiek sadarbības uzsākšana?</h1>
-            <i class="fa-solid fa-plus"></i>
-        </div>
-        </div>
-    </section> -->
-
     <section id="BUJ">
         <div class="buj-virsraksts">
             <h1>Biežāk uzdotie jautājumi (BUJ)</h1>
@@ -313,7 +318,7 @@
         </div>
 
         <div class="buj-izvelne">
-            <div class="buj-izvele ir-aktivs">
+            <div class="buj-izvele zils">
                 <i class="fa-solid fa-handshake"></i>
                 <span>Sadarbība</span>
             </div>
@@ -478,11 +483,11 @@
                             <input type="text" placeholder="Temats" class="kontakti-temats">
                         </div>
                         <textarea rows="4" placeholder="Tavs ziņojums"></textarea>
-                        <button type="button">Nosūtīt ziņu</button>
+                        <button id="anketasPoga" type="button">Nosūtīt ziņu</button>
                         <div class="kontakti-socialie">
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         </div>
                     </form>
 
@@ -490,12 +495,14 @@
             </div>
 
             <div class="kontakti-karte">
-                <iframe title="Programm IT karte" src="https://www.google.com/maps?q=Riga%2C%20Latvia&output=embed"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.1229223873484!2d21.024224977202554!3d56.53536153144575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46faa7ccb271be93%3A0xf9d1bf3406ae7d9d!2sLiep%C4%81jas%20Valsts%20tehnikums!5e1!3m2!1slv!2slv!4v1768808203423!5m2!1slv!2slv" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>Programm IT &copy 2026</p>
+    </footer>
 
 </body>
 
